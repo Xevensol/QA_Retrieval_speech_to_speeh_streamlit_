@@ -24,7 +24,7 @@ from pydub import AudioSegment
 load_dotenv()
 
 eleven_api_key = os.getenv("ELEVEN_API_KEY")
-aai.settings.api_key = os.getenv("aai.settings.api_key")
+aai.settings.api_key = os.getenv("ASSEMBLYAI_API_KEY")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 API_KEY = os.getenv("OPENAI_API_KEY")
 
