@@ -19,8 +19,6 @@ from langchain_community.document_loaders import AssemblyAIAudioTranscriptLoader
 from audio_recorder_streamlit import audio_recorder
 from openai import OpenAI
 from dotenv import load_dotenv
-from elevenlabs import VoiceSettings
-from elevenlabs.client import ElevenLabs
 from pydub import AudioSegment
 import soundfile as sf
 load_dotenv()
@@ -44,13 +42,12 @@ def qdrant_client():
 
 qdrant_store = qdrant_client()
 
+# if not eleven_api_key:
+#     raise ValueError("ELEVENLABS_API_KEY environment variable not set")
 
-if not eleven_api_key:
-    raise ValueError("ELEVENLABS_API_KEY environment variable not set")
-
-client = ElevenLabs(
-    api_key=eleven_api_key,
-)
+# client = ElevenLabs(
+#     api_key=eleven_api_key,
+# )
 
 def assembly_ai_voice_to_text(audio_location):
     loader = AssemblyAIAudioTranscriptLoader(file_path=audio_location)
