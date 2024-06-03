@@ -22,8 +22,7 @@ protobuf==4.25.3
 pyarrow==16.1.0
 python-dotenv==1.0.1
 pyttsx3==2.90
-pytz==2024.1
-pywin32==305.1
+pywin32
 qdrant-client==1.9.1
 sentence-transformers==3.0.0
 soundfile==0.12.1
